@@ -12,7 +12,7 @@ int main() {
     std::cout << "zadaj pocet riadkov: ";
     std::cin >> n;
 
-    for (i = 1; i <= n; i--) {
+    for (i = n; i >= 1; i--) {
         for (k = 1; k <= i; k++) {
            std::cout << "* ";
         }
