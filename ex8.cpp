@@ -9,7 +9,7 @@ int main() {
 	
 	// initiate variables to store round results
 	int tempGryffindor, tempSlytherin, tempRavenclaw, tempHufflepuff;
-	
+
 	// repeat asking for round results until one of the teams achieved atleast 10 score
 	while(gryffindor < 10 && slytherin < 10 && ravenclaw < 10 && hufflepuff < 10) {
 		
@@ -41,7 +41,6 @@ int main() {
 
         // increment round number
         i++;
-		
 	}
 
     // print out the total results
@@ -49,7 +48,9 @@ int main() {
     std::cout << "\nGryffindor: "  + std::to_string(gryffindor);
     std::cout << "\nSlytherin: "  + std::to_string(slytherin);
     std::cout << "\nRavenclaw: "  + std::to_string(ravenclaw);
-    std::cout << "\nHufflepuff: "  + std::to_string(hufflepuff);
+    std::cout << "\nHufflepuff: "  + std::to_string(hufflepuff) << std::endl;
+
+	std::cout << "\nThere was " << i << " rounds this season";
 
     return 1;
 }
