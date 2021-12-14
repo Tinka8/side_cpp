@@ -5,7 +5,7 @@ int main() {
 	int gryffindor = 0, slytherin = 0, ravenclaw = 0, hufflepuff = 0;
 	
 	// initiate variable to hold round number
-	int i = 1;
+	int i = 1, j;
 	
 	// initiate variables to store round results
 	int tempGryffindor, tempSlytherin, tempRavenclaw, tempHufflepuff;
@@ -50,7 +50,22 @@ int main() {
     std::cout << "\nRavenclaw: "  + std::to_string(ravenclaw);
     std::cout << "\nHufflepuff: "  + std::to_string(hufflepuff) << std::endl;
 
-	std::cout << "\nThere was " << i << " rounds this season";
+	std::cout << "\nThere was " << i << " rounds this season" << std::endl;
+
+	for (j = 100; j >= 0; j--) {
+		if (j == gryffindor) {
+			std::cout << "\nGryffindor " << j;
+		} 
+		if (j == slytherin) {
+			std::cout << "\nSlytherin " << j;
+		} 
+		if (j == ravenclaw) {
+			std::cout << "\nRavenclaw " << j;
+		} 
+		if (j == hufflepuff) {
+			std::cout << "\nHufflepuff " << j;
+		}
+	}
 
     return 1;
 }
