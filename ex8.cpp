@@ -6,6 +6,7 @@ int main() {
 
 	// initiate variable to hold round number
 	int i = 1, j, k, m, n;
+	int array = 4;
 	
 	// initiate variables to store round results
 	int scores[4] = {0, 0, 0, 0};;
@@ -16,7 +17,7 @@ int main() {
 		
 		std::cout << "\nHow much score did teams get in round " + std::to_string(i) + "\n";
 
-		for (k = 0; k < 4; k++) {
+		for (k = 0; k < array; k++) {
 			std::cout << colleges[k];
 			std::cin >> tempScores[k];
 			scores[k] = scores[k] + tempScores[k];
@@ -29,7 +30,7 @@ int main() {
     // print out the total results
     std::cout << "\nSeason ended with following results:" << std::endl;
 
-	for (n = 0; n < 4; n++) {
+	for (n = 0; n < array; n++) {
 		std::cout << colleges[n] << std::to_string(scores[n]);
 		std::cout << "\n";
 	}
@@ -37,7 +38,7 @@ int main() {
 	std::cout << "\nThere was " << i << " rounds this season" << std::endl;
 
 	for (j = 100; j >= 0; j--) {
-		for (m = 0; m < 4; m++)
+		for (m = 0; m < array; m++)
 		if (j == scores[m]) {
 			std::cout <<  colleges[m] << j;
 			std::cout << "\n";
