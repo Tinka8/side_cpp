@@ -5,7 +5,7 @@ int main() {
 	std::string colleges[4] = { "Gryffindor ", "Slytherin ", "Ravenclaw ", "Hufflepuff " };
 
 	// initiate variable to hold round number
-	int i = 1, j, k;
+	int i = 1, j, k, m, n;
 	
 	// initiate variables to store round results
 	int scores[4] = {0, 0, 0, 0};;
@@ -27,26 +27,20 @@ int main() {
 	}
 
     // print out the total results
-    std::cout << "\nSeason ended with following results:";
-    std::cout << "\nGryffindor: "  + std::to_string(scores[0]);
-    std::cout << "\nSlytherin: "  + std::to_string(scores[1]);
-    std::cout << "\nRavenclaw: "  + std::to_string(scores[2]);
-    std::cout << "\nHufflepuff: "  + std::to_string(scores[3]) << std::endl;
+    std::cout << "\nSeason ended with following results:" << std::endl;
+
+	for (n = 0; n < 4; n++) {
+		std::cout << colleges[n] << std::to_string(scores[n]);
+		std::cout << "\n";
+	}
 
 	std::cout << "\nThere was " << i << " rounds this season" << std::endl;
 
 	for (j = 100; j >= 0; j--) {
-		if (j == scores[0]) {
-			std::cout << "\nGryffindor " << j;
-		} 
-		if (j == scores[1]) {
-			std::cout << "\nSlytherin " << j;
-		} 
-		if (j == scores[2]) {
-			std::cout << "\nRavenclaw " << j;
-		} 
-		if (j == scores[3]) {
-			std::cout << "\nHufflepuff " << j;
+		for (m = 0; m < 4; m++)
+		if (j == scores[m]) {
+			std::cout <<  colleges[m] << j;
+			std::cout << "\n";
 		}
 	}
 
